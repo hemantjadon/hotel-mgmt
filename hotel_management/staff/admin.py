@@ -6,11 +6,15 @@ from .models import Staff, Manager, Worker, Department
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
     icon = '<i class="material-icons">account_balance</i>'
-
+    
 @admin.register(Manager)
 class ManagerAdmin(admin.ModelAdmin):
     icon = '<i class="material-icons">assignment_ind</i>'
+    fields = ('user', 'department', 'supervisor')
+    list_display = ('user', 'department', 'supervisor')
 
 @admin.register(Worker)
-class RoomAdmin(admin.ModelAdmin):
+class WorkerAdmin(admin.ModelAdmin):
     icon = '<i class="material-icons">account_box</i>'
+    fields = ('user', 'department', 'supervisor')
+    list_display = ('user', 'department', 'supervisor')

@@ -18,4 +18,4 @@ class AuthUser(AbstractUser):
     phone_number = models.PositiveIntegerField(null=True, blank=False)
 
     def __str__(self):
-        return self.first_name + ' ' + self.last_name
+        return self.username

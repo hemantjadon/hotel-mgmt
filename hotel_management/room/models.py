@@ -10,7 +10,7 @@ class Room(models.Model):
     type = models.CharField(max_length=3, blank=False, null=True, choices=ROOM_TYPE_CHOICES)
     floor = models.IntegerField(blank=False, null=True, choices=ROOM_FLOOR_CHOICES)
     room_no = models.CharField(max_length=3, blank=False, null=True)
-    discription = models.TextField()
+    description = models.TextField()
 
     def __str__(self):
         return self.type + ' ' + str(self.room_no)

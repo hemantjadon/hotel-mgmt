@@ -5,4 +5,5 @@ admin.site.site_header = 'Hotel Management System'
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^explorer/', include('explorer.urls')),
 ]

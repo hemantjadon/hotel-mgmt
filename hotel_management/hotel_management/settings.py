@@ -42,7 +42,8 @@ INSTALLED_APPS = (
     'room',
     'customer',
     'booking',
-    'django_extensions'
+    'django_extensions',
+    'explorer'
 )
 
 MIDDLEWARE_CLASSES = (

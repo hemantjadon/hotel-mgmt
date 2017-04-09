@@ -18,8 +18,6 @@ class Staff(models.Model):
 class Manager(Staff):
     department = models.ForeignKey('Department', blank=False, null=True)
     supervisor = models.ForeignKey('self', blank=True, null=True)
-    def __str__(self):
-        return super(Manager).__str__()
 
 class Worker(Staff):
     department = models.ForeignKey('Department', blank=False, null=True)
