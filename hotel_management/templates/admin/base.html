@@ -1,0 +1,33 @@
+{% extends "admin/base.html" %}
+
+{% load staticfiles %}
+
+{% block favicon %}<link href="{% static 'common/favicon.png' %}" type='image/png' rel="icon">{% endblock %}
+
+{% block extrastyle %}
+<style>
+	.content .left-panel {
+		flex-basis: 100% !important;
+	}
+
+    .content .row {
+		width: 100%;
+	}
+
+	nav {
+		background-color: #e91e63;
+	}
+
+	.side-nav .userView {
+		background-color: #e91e63;
+	}
+
+	.side-nav li.active div.collapsible-body li.active {
+		background-color: #e91e63 !important;
+	}
+
+	.fixed-action-btn a {
+		background-color: #e91e63 !important;		
+	}
+</style>
+{% endblock %}
