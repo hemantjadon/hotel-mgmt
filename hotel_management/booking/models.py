@@ -10,7 +10,7 @@ class Booking(models.Model):
     check_in_date = models.DateField(blank=False, null=True)
     check_out_date = models.DateField(blank=False, null=True)
     room = models.ForeignKey(Room, blank=False, null=True)
-    customer = models.OneToOneField(Customer, blank=False, null=True)
+    customer = models.ForeignKey(Customer, blank=False, null=True)
     price = models.IntegerField(blank=False, null=True)
     customer_points = models.IntegerField(default=0)
     rating = models.IntegerField(choices=RATING_CHOICES)

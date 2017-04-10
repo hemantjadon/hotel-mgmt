@@ -11,14 +11,13 @@ class Department(models.Model):
 
 class Staff(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    supervisor = models.ForeignKey('Manager', blank=True, null=True, related_name='managed_by')
 
     def __str__(self):
         return self.user.username
 
 class Manager(Staff):
     department = models.ForeignKey('Department', blank=False, null=True)
-    supervisor = models.ForeignKey('self', blank=True, null=True)
 
 class Worker(Staff):
     department = models.ForeignKey('Department', blank=False, null=True)
-    supervisor = models.ForeignKey('Manager', blank=True, null=True)
