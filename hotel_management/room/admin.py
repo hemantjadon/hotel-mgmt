@@ -12,5 +12,5 @@ class BookinkInline(admin.StackedInline):
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
     icon = '<i class="material-icons">room</i>'
-    list_display = ('room_no', 'type', 'floor', 'description')
+    list_display = ('room_no', 'floor', 'description')
     inlines = [BookinkInline]

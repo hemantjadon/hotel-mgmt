@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Booking
+from .forms import BookingForm
 
 # Register your models here.
 
@@ -7,3 +8,4 @@ from .models import Booking
 class BookingAdmin(admin.ModelAdmin):
     icon = '<i class="material-icons">book</i>'
     list_display = ('check_in_date', 'check_out_date', 'room', 'customer', 'customer_points', 'price')
+    form = BookingForm

@@ -13,7 +13,7 @@ class Customer(models.Model):
     street = models.CharField(max_length=30, blank=False, null=True)
     city = models.CharField(max_length=30, blank=False, null=True)
     state = models.CharField(max_length=30, blank=False, null=True)
-    zip_code = models.IntegerField(blank=False, null=True)
+    zip_code = models.CharField(max_length=6, blank=False, null=True)
 
     def __str__(self):
         return self.user.username

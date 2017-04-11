@@ -14,8 +14,8 @@ from django.contrib.auth.models import AbstractUser
     $property: phone_number | Phone Number of the user
 '''
 class AuthUser(AbstractUser):
-    dob = models.DateField(null=True, blank=False)
-    phone_number = models.PositiveIntegerField(null=True, blank=False)
+    age = models.IntegerField(null=True, blank=False)
+    phone_number = models.CharField(max_length=10, null=True, blank=False)
 
     def __str__(self):
         return self.username
